@@ -81,7 +81,7 @@ module.exports = (app) => {
         
         
         db.update({_id: req.params.id}, req.body, err =>{
-
+            console.log(req.body)
             const errors = validationResult(req)
 
             if(!errors.isEmpty()) return app.src.utils.error.send(errors, req, res)
